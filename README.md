@@ -67,8 +67,8 @@ archives/
 若通过 GitHub Raw 访问，URL 格式为：
 
 ```
-https://raw.githubusercontent.com/<user>/<repo>/<branch>/archives/index.json
-https://raw.githubusercontent.com/<user>/<repo>/<branch>/archives/2026-10-01/01-07.json
+https://raw.githubusercontent.com/RejTech/RejHotSearchDB/main/archives/index.json
+https://raw.githubusercontent.com/RejTech/RejHotSearchDB/main/archives/2026-10-01/01-07.json
 ```
 
 ## 自动化
