@@ -15,6 +15,8 @@
 
 单平台失败不影响其他平台，失败信息会记录在当日 JSON 的 `platforms.<name>.error` 字段。
 
+每条热搜带有 `id`（平台+标题的稳定哈希，同一词条跨时间点 ID 不变）和 `detail`（抓取该条链接页面提取的标题/描述/配图，抓取失败为 `null`）。
+
 ## 目录结构
 
 ```
@@ -56,7 +58,13 @@ archives/
           "title": "热搜标题",
           "hot": 1370772,
           "url": "https://s.weibo.com/weibo?q=...",
-          "label": "热"
+          "label": "热",
+          "id": "a1b2c3d4e5f6",
+          "detail": {
+            "title": "详情页标题",
+            "description": "详情页描述",
+            "image": "https://...jpg"
+          }
         }
       ]
     }
