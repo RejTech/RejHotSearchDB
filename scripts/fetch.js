@@ -199,6 +199,20 @@ async function fetchToutiao() {
   }));
 }
 
+/** AIHOT 热点榜（AI领域，匿名只读，无需Key） */
+async function fetchAihot() {
+  const data = await fetchJson("https://aihot.news/api/v1/hot-topics", {
+    "User-Agent": "aihot-api/1.0",
+  });
+  return (data.items || []).slice(0, 50).map((item) => ({
+    rank: item.rank,
+    title: item.title || "",
+    hot: item.signalCount || "",
+    url: item.links?.original || item.links?.aihot || "",
+    label: item.source?.name || "",
+  }));
+}
+
 const PLATFORMS = {
   weibo: fetchWeibo,
   zhihu: fetchZhihu,
@@ -206,6 +220,7 @@ const PLATFORMS = {
   bilibili: fetchBilibili,
   douyin: fetchDouyin,
   toutiao: fetchToutiao,
+  aihot: fetchAihot,
 };
 
 /** 删除超过30天的归档目录 */
