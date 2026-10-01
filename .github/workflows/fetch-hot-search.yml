@@ -2,8 +2,8 @@ name: Fetch Hot Search
 
 on:
   schedule:
-    # 每小时整点执行（UTC时间，北京时间 = UTC+8）
-    - cron: "0 * * * *"
+    # 每30分钟执行一次（UTC时间，北京时间 = UTC+8）
+    - cron: "*/30 * * * *"
   workflow_dispatch: # 支持手动触发
 
 permissions:

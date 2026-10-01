@@ -82,7 +82,7 @@ https://raw.githubusercontent.com/RejTech/RejHotSearchDB/main/archives/2026-10-0
 
 ## 自动化
 
-- GitHub Actions 每小时整点执行一次（`.github/workflows/fetch-hot-search.yml`），也可在 Actions 页面手动触发
+- GitHub Actions 每 30 分钟执行一次（`.github/workflows/fetch-hot-search.yml`），也可在 Actions 页面手动触发
 - 每次抓取后自动重建索引并提交回仓库
 - 超过 30 天的归档自动删除
 
